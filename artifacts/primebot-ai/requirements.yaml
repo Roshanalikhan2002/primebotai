@@ -1,0 +1,19 @@
+packages:
+  "framer-motion": "Required for smooth page transitions, scroll-triggered fade-ins, and complex component animations that give a premium feel."
+  "lucide-react": "Standard icon library for UI elements."
+
+images:
+  - path: "artifacts/primebot-ai/public/images/hero-bg.png"
+    description: "Dark futuristic abstract background with glowing neon cyan and deep purple grid lines, soft light leaks, and a high-tech sleek atmosphere"
+    aspect_ratio: "16:9"
+  - path: "artifacts/primebot-ai/public/images/about-art.png"
+    description: "Abstract 3D glassmorphism sphere floating in a dark studio environment with intense neon blue edge lighting and subtle reflections"
+    aspect_ratio: "1:1"
+  - path: "artifacts/primebot-ai/public/images/demo-bg.png"
+    description: "Dark tech interface background featuring subtle data nodes, faint code snippets, and glowing cybernetic connections in deep navy"
+    aspect_ratio: "16:9"
+
+notes:
+  - App is a single-page landing site with anchor scrolling.
+  - Chatbot and Contact form use localStorage to simulate persistence since there is no backend.
+  - Using Framer Motion for scroll-triggered visual flair.

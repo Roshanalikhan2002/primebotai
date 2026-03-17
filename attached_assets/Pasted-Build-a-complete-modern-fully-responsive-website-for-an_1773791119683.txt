@@ -1,0 +1,62 @@
+Build a complete, modern, fully responsive website for an AI company named "PrimeBot AI".
+
+Company Focus:
+PrimeBot AI provides AI-powered chatbots, automation solutions, and intelligent digital assistants for businesses.
+
+Requirements:
+
+1. Design & UI:
+- Create a futuristic, premium, and tech-focused design
+- Use a dark theme with neon/gradient accents (blue, purple, cyan)
+- Add shimmer, glow, glassmorphism, and shiny effects across the UI
+- Smooth animations, hover effects, and transitions
+- Clean, modern typography
+- Fully responsive for mobile, tablet, and desktop
+
+2. Pages/Sections:
+- Home (hero section with tagline like: "Automate Your Business with AI")
+- About Us (company vision, mission, AI expertise)
+- Services (AI Chatbots, Automation, AI Assistants)
+- Features (speed, accuracy, scalability, 24/7 automation)
+- Portfolio / Demo (sample chatbot UI or mock demo)
+- Contact Section
+
+3. Contact Form:
+- Add a fully functional contact form with:
+  - Name
+  - Email
+  - Message
+- Form should have validation and a modern UI
+- Show success message on submission
+
+4. Chatbot Integration:
+- Add a floating chatbot widget on bottom-right
+- Chatbot should:
+  - Greet users
+  - Provide predefined replies (services, pricing, contact info)
+  - Save conversation locally (localStorage)
+
+5. Social Links Integration:
+- Add clickable icons linking to:
+  - LinkedIn: https://www.linkedin.com/company/primebot-ai/posts/?feedView=all
+  - Instagram: https://www.instagram.com/primebot.ai?utm_source=qr&igsh=NzRqMmw4aDV4cjMy
+  - Email: contact.primebotai@gmail.com (mailto link)
+
+6. Branding:
+- Add a placeholder for company logo at top-left (I will replace it later)
+- Use "PrimeBot AI" branding consistently
+
+7. Technical:
+- Use HTML, CSS (Tailwind or modern CSS), and JavaScript
+- Clean, well-structured code
+- Fast loading and optimized
+
+8. Extra Features:
+- Sticky navbar
+- Scroll animations
+- CTA buttons like "Get Started" and "Contact Us"
+- Footer with links and contact info
+
+Output:
+- Provide full working code (HTML, CSS, JS)
+- Everything should work out of the box in Replit

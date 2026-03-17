@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "PrimeBot AI"
+version = "1.0.0"
+id = "artifacts/primebot-ai"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+localPort = 22890
+name = "web"
+paths = ["/"]
+
+[services.development]
+run = "pnpm --filter @workspace/primebot-ai run dev"
+
+[services.env]
+PORT = "22890"
+BASE_PATH = "/"
+
+[services.production]
+build = ["pnpm", "--filter", "@workspace/primebot-ai", "run", "build"]
+publicDir = "artifacts/primebot-ai/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
