@@ -65,7 +65,7 @@ function HeroSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-          className="text-5xl md:text-7xl lg:text-8xl font-display font-extrabold text-white leading-tight mb-6"
+          className="text-4xl sm:text-5xl md:text-6xl font-display font-extrabold text-white leading-tight mb-6"
         >
           Automate Your <br className="hidden md:block" />
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-blue-400 to-secondary text-glow">

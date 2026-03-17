@@ -48,7 +48,7 @@ export function Navbar() {
           <img 
             src={`${import.meta.env.BASE_URL}logo.png`} 
             alt="PrimeBot AI" 
-            className="h-10 w-auto object-contain"
+            className="h-14 w-auto object-contain drop-shadow-[0_0_8px_rgba(0,240,255,0.3)]"
             onError={(e) => {
               // Fallback if logo fails to load
               e.currentTarget.style.display = 'none';
