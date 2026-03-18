@@ -55,20 +55,30 @@ function HeroSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-primary/30 bg-primary/10 text-primary text-sm font-medium mb-8 backdrop-blur-md"
+          className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-primary/30 bg-primary/10 text-sm font-medium mb-8 backdrop-blur-md shimmer-border"
         >
-          <Sparkles size={16} />
-          <span>Next-Gen AI Automation</span>
+          <Sparkles size={16} className="text-cyan-400" />
+          <span className="shimmer-text">Next-Gen AI Automation</span>
         </motion.div>
 
         <motion.h1 
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-          className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-display font-extrabold text-white leading-tight mb-6"
+          className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-display font-extrabold leading-tight mb-6"
         >
-          Automate Your Business with{" "}
-          <span className="shimmer-text">AI</span>
+          <span
+            style={{
+              background: "linear-gradient(90deg, #ffffff 0%, #c4b5fd 25%, #ffffff 50%, #67e8f9 75%, #ffffff 100%)",
+              backgroundSize: "200% auto",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+              backgroundClip: "text",
+              animation: "shimmer 5s linear infinite",
+            }}
+          >
+            Automate Your Business with AI
+          </span>
         </motion.h1>
 
         <motion.p 

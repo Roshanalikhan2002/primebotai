@@ -45,19 +45,38 @@ export function Navbar() {
           onClick={(e) => { e.preventDefault(); scrollTo("#home"); }}
           className="flex items-center gap-2.5 z-50 relative"
         >
-          {/* Logo icon — cropped to show only the hexagon brain, bg removed */}
-          <div className="h-10 w-10 overflow-hidden relative flex-shrink-0">
+          {/* Logo icon with shimmer sweep */}
+          <div className="h-10 w-10 overflow-hidden relative flex-shrink-0 rounded-sm">
             <img
               src={`${import.meta.env.BASE_URL}logo-icon.png`}
               alt="PrimeBot AI icon"
               className="absolute top-0 left-0 w-full"
               style={{ height: "160%", objectFit: "cover", objectPosition: "top center" }}
             />
+            {/* Shimmer sweep overlay on the logo */}
+            <div
+              className="absolute inset-0 pointer-events-none"
+              style={{
+                background: "linear-gradient(105deg, transparent 30%, rgba(255,255,255,0.25) 50%, transparent 70%)",
+                backgroundSize: "200% 100%",
+                animation: "shimmer 2.5s linear infinite",
+              }}
+            />
           </div>
 
-          <span className="text-[17px] font-extrabold tracking-wide leading-none">
-            <span className="text-white">PrimeBot</span>{" "}
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400">AI</span>
+          {/* Full company name with shimmer */}
+          <span
+            className="text-[17px] font-extrabold tracking-wide leading-none"
+            style={{
+              background: "linear-gradient(90deg, #e2e8f0 0%, #818cf8 20%, #ffffff 40%, #06b6d4 60%, #a855f7 80%, #e2e8f0 100%)",
+              backgroundSize: "200% auto",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+              backgroundClip: "text",
+              animation: "shimmer 4s linear infinite",
+            }}
+          >
+            PrimeBot AI
           </span>
         </a>
 
