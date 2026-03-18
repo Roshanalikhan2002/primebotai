@@ -98,13 +98,13 @@ function HeroSection() {
         >
           <button 
             onClick={() => scrollTo("#contact")}
-            className="px-8 py-4 rounded-full font-semibold text-primary-foreground bg-primary hover:bg-primary/90 transition-all hover:scale-105 shadow-[0_0_20px_rgba(0,240,255,0.4)] flex items-center justify-center gap-2"
+            className="btn-shimmer px-8 py-4 rounded-full font-semibold text-primary-foreground bg-primary hover:bg-primary/90 transition-all hover:scale-105 shadow-[0_0_20px_rgba(0,240,255,0.4)] flex items-center justify-center gap-2"
           >
             Get Started <ArrowRight size={18} />
           </button>
           <button 
             onClick={() => scrollTo("#about")}
-            className="px-8 py-4 rounded-full font-semibold text-white bg-white/5 border border-white/10 hover:bg-white/10 transition-all backdrop-blur-sm"
+            className="btn-shimmer btn-shimmer-slow px-8 py-4 rounded-full font-semibold text-white bg-white/5 border border-white/10 hover:bg-white/10 transition-all backdrop-blur-sm"
           >
             Learn More
           </button>
@@ -525,7 +525,7 @@ function ContactSection() {
               <button
                 type="submit"
                 disabled={status !== 'idle'}
-                className="w-full py-4 rounded-xl font-bold bg-primary text-primary-foreground hover:bg-primary/90 transition-all disabled:opacity-70 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                className="btn-shimmer w-full py-4 rounded-xl font-bold bg-primary text-primary-foreground hover:bg-primary/90 transition-all disabled:opacity-70 disabled:cursor-not-allowed flex items-center justify-center gap-2"
               >
                 {status === 'idle' && <>Send Message <Send size={18} /></>}
                 {status === 'submitting' && <div className="w-5 h-5 border-2 border-primary-foreground/30 border-t-primary-foreground rounded-full animate-spin" />}

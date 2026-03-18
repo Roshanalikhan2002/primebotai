@@ -190,7 +190,7 @@ export function ChatWidget() {
                 <button
                   type="submit"
                   disabled={!inputValue.trim()}
-                  className="absolute right-1.5 p-1.5 rounded-full bg-primary text-primary-foreground disabled:opacity-50 disabled:cursor-not-allowed transition-opacity hover:opacity-90"
+                  className="btn-shimmer absolute right-1.5 p-1.5 rounded-full bg-primary text-primary-foreground disabled:opacity-50 disabled:cursor-not-allowed transition-opacity hover:opacity-90"
                 >
                   <Send size={16} className="ml-0.5" />
                 </button>

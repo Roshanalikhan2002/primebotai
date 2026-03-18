@@ -110,7 +110,7 @@ export function Navbar() {
           </ul>
           <button 
             onClick={() => scrollTo("#contact")}
-            className="px-6 py-2.5 rounded-full font-medium text-sm bg-white/5 border border-primary/50 text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300 shadow-[0_0_15px_-3px_rgba(0,240,255,0.3)] hover:shadow-[0_0_25px_0_rgba(0,240,255,0.5)]"
+            className="btn-shimmer px-6 py-2.5 rounded-full font-medium text-sm bg-white/5 border border-primary/50 text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300 shadow-[0_0_15px_-3px_rgba(0,240,255,0.3)] hover:shadow-[0_0_25px_0_rgba(0,240,255,0.5)]"
           >
             Get Started
           </button>
@@ -154,7 +154,7 @@ export function Navbar() {
               </ul>
               <button 
                 onClick={() => scrollTo("#contact")}
-                className="w-full px-6 py-3 rounded-xl font-medium bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
+                className="btn-shimmer w-full px-6 py-3 rounded-xl font-medium bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
               >
                 Get Started
               </button>
