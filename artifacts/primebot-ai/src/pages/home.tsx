@@ -65,12 +65,10 @@ function HeroSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-          className="text-4xl sm:text-5xl md:text-6xl font-display font-extrabold text-white leading-tight mb-6"
+          className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-display font-extrabold text-white leading-tight mb-6"
         >
-          Automate Your <br className="hidden md:block" />
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-blue-400 to-secondary text-glow">
-            Business with AI
-          </span>
+          Automate Your Business with{" "}
+          <span className="shimmer-text">AI</span>
         </motion.h1>
 
         <motion.p 
@@ -125,7 +123,7 @@ function AboutSection() {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-3xl md:text-5xl font-display font-bold mb-6">
-              Leading the <span className="text-primary">AI Revolution</span>
+              Leading the <span className="shimmer-text">AI Revolution</span>
             </h2>
             <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
               At PrimeBot AI, we believe in a future where technology amplifies human potential. We build intelligent systems that work tirelessly in the background, allowing your team to focus on creativity, strategy, and growth.
@@ -197,7 +195,7 @@ function ServicesSection() {
             viewport={{ once: true }}
             className="text-3xl md:text-5xl font-display font-bold mb-6"
           >
-            Solutions that <span className="text-secondary">Scale</span>
+            Solutions that <span className="shimmer-text">Scale</span>
           </motion.h2>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
@@ -257,7 +255,7 @@ function FeaturesSection() {
         >
           <div>
             <h2 className="text-3xl md:text-5xl font-display font-bold mb-6">
-              Why Choose <span className="text-primary">PrimeBot?</span>
+              Why Choose <span className="shimmer-text">PrimeBot?</span>
             </h2>
             <p className="text-lg text-muted-foreground mb-10">
               We don't just build wrappers around existing models. We engineer robust, enterprise-grade systems designed for mission-critical applications.
@@ -439,7 +437,7 @@ function ContactSection() {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl md:text-5xl font-display font-bold mb-6">
-              Ready to Upgrade your <span className="text-primary">Workflow?</span>
+              Ready to Upgrade your <span className="shimmer-text">Workflow?</span>
             </h2>
             <p className="text-lg text-muted-foreground mb-8">
               Drop us a line to discuss your custom automation needs, get pricing details, or schedule a personalized live demo.

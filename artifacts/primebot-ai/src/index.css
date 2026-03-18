@@ -120,6 +120,49 @@
   .bg-gradient-tech {
     @apply bg-gradient-to-br from-primary via-secondary to-accent;
   }
+
+  .shimmer-text {
+    background: linear-gradient(
+      90deg,
+      #06b6d4 0%,
+      #818cf8 20%,
+      #ffffff 40%,
+      #a855f7 60%,
+      #3b82f6 80%,
+      #06b6d4 100%
+    );
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shimmer 4s linear infinite;
+  }
+
+  .shimmer-border {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .shimmer-border::after {
+    content: "";
+    position: absolute;
+    top: 0; left: -100%;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.08), transparent);
+    animation: shimmer-slide 3s linear infinite;
+    pointer-events: none;
+  }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+@keyframes shimmer-slide {
+  0% { background-position: 100% 0; }
+  100% { background-position: -100% 0; }
 }
 
 @keyframes blob {
