@@ -8,6 +8,7 @@ import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { ChatWidget } from "@/components/chat-widget";
 import { useLocalStorage } from "@/hooks/use-local-storage";
+import companyLogo from "@assets/company_logo_1773792107107.png";
 
 export default function Home() {
   return (
@@ -55,7 +56,7 @@ function HeroSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-primary/30 bg-primary/10 text-sm font-medium mb-8 backdrop-blur-md shimmer-border"
+          className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-primary/30 bg-primary/10 text-sm font-medium mb-8 backdrop-blur-md shimmer-border mt-12"
         >
           <Sparkles size={16} className="text-cyan-400" />
           <span className="shimmer-text">Next-Gen AI Automation</span>
@@ -65,7 +66,7 @@ function HeroSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-          className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-display font-extrabold leading-tight mb-6"
+          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-sans font-bold tracking-tight leading-tight mb-6"
         >
           <span
             style={{

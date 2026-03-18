@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { useScrollSpy } from "@/hooks/use-scroll-spy";
+import { TransparentLogo } from "./transparent-logo";
 
 const NAV_LINKS = [
   { name: "Home", href: "#home" },
@@ -45,39 +46,19 @@ export function Navbar() {
           onClick={(e) => { e.preventDefault(); scrollTo("#home"); }}
           className="flex items-center gap-2.5 z-50 relative"
         >
-          {/* Logo icon with shimmer sweep */}
-          <div className="h-10 w-10 overflow-hidden relative flex-shrink-0 rounded-sm">
-            <img
-              src={`${import.meta.env.BASE_URL}logo-icon.png`}
-              alt="PrimeBot AI icon"
-              className="absolute top-0 left-0 w-full"
-              style={{ height: "160%", objectFit: "cover", objectPosition: "top center" }}
-            />
+          {/* True transparent logo rendering via canvas */}
+          <div className="h-16 w-48 md:h-20 md:w-56 relative flex-shrink-0 flex items-center group">
+            <TransparentLogo className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[150%] h-[150%] object-contain drop-shadow-[0_0_10px_rgba(0,180,255,0.4)]" />
             {/* Shimmer sweep overlay on the logo */}
             <div
-              className="absolute inset-0 pointer-events-none"
+              className="absolute inset-0 pointer-events-none mix-blend-overlay opacity-0 group-hover:opacity-100 transition-opacity duration-300"
               style={{
-                background: "linear-gradient(105deg, transparent 30%, rgba(255,255,255,0.25) 50%, transparent 70%)",
+                background: "linear-gradient(105deg, transparent 30%, rgba(255,255,255,0.8) 50%, transparent 70%)",
                 backgroundSize: "200% 100%",
                 animation: "shimmer 2.5s linear infinite",
               }}
             />
           </div>
-
-          {/* Full company name with shimmer */}
-          <span
-            className="text-[17px] font-extrabold tracking-wide leading-none"
-            style={{
-              background: "linear-gradient(90deg, #e2e8f0 0%, #818cf8 20%, #ffffff 40%, #06b6d4 60%, #a855f7 80%, #e2e8f0 100%)",
-              backgroundSize: "200% auto",
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
-              backgroundClip: "text",
-              animation: "shimmer 4s linear infinite",
-            }}
-          >
-            PrimeBot AI
-          </span>
         </a>
 
         {/* Desktop Nav */}

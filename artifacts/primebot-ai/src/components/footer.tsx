@@ -1,4 +1,5 @@
 import { Instagram, Linkedin, Mail, ArrowRight } from "lucide-react";
+import { TransparentLogo } from "./transparent-logo";
 
 export function Footer() {
   const scrollTo = (href: string) => {
@@ -19,15 +20,10 @@ export function Footer() {
           
           {/* Brand Col */}
           <div className="lg:col-span-2">
-            <a href="#home" onClick={(e) => { e.preventDefault(); scrollTo("#home"); }} className="inline-block mb-6">
-               <img 
-                src={`${import.meta.env.BASE_URL}logo.png`} 
-                alt="PrimeBot AI" 
-                className="h-12 w-auto object-contain"
-                onError={(e) => {
-                  e.currentTarget.style.display = 'none';
-                }}
-              />
+            <a href="#home" onClick={(e) => { e.preventDefault(); scrollTo("#home"); }} className="inline-flex relative mb-6">
+               <div className="relative h-20 w-48 flex items-center group">
+                 <TransparentLogo className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[150%] h-[150%] object-contain drop-shadow-[0_0_10px_rgba(0,180,255,0.4)]" />
+              </div>
             </a>
             <p className="text-muted-foreground max-w-sm mb-8 leading-relaxed">
               Leading the AI revolution. We build intelligent systems that automate workflows, engage customers, and scale your business infinitely.
