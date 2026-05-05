@@ -40,11 +40,11 @@ export function Navbar() {
         isScrolled ? "py-4 glass-panel border-b border-white/10" : "py-6 bg-transparent"
       }`}
     >
-      <div className="w-full px-2 md:px-10 flex items-center justify-between">
+      <div className="w-full px-0 md:px-10 flex items-center justify-between">
         <a 
           href="#home" 
           onClick={(e) => { e.preventDefault(); scrollTo("#home"); }}
-          className="flex items-center z-50 relative -ml-4 md:ml-0"
+          className="flex items-center z-50 relative -ml-8 md:ml-0"
         >
           {/* True transparent logo rendering via canvas */}
           <div className="h-16 w-40 md:h-20 md:w-48 relative flex-shrink-0 flex items-center group">
