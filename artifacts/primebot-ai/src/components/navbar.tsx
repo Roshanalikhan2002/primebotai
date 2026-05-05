@@ -48,7 +48,7 @@ export function Navbar() {
         >
           {/* True transparent logo rendering via canvas */}
           <div className="h-16 w-40 md:h-20 md:w-48 relative flex-shrink-0 flex items-center group">
-            <TransparentLogo className="absolute top-1/2 left-[-30%] -translate-y-1/2 w-[180%] h-[180%] object-contain drop-shadow-[0_0_10px_rgba(0,180,255,0.4)]" />
+            <TransparentLogo className="absolute top-1/2 left-[-15%] -translate-y-1/2 w-[180%] h-[180%] object-contain drop-shadow-[0_0_10px_rgba(0,180,255,0.4)]" />
             {/* Shimmer sweep overlay on the logo */}
             <div
               className="absolute inset-0 pointer-events-none mix-blend-overlay opacity-0 group-hover:opacity-100 transition-opacity duration-300"
