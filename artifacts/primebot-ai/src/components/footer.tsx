@@ -22,7 +22,7 @@ export function Footer() {
           <div className="lg:col-span-2">
             <a href="#home" onClick={(e) => { e.preventDefault(); scrollTo("#home"); }} className="inline-flex relative mb-6">
                <div className="relative h-20 w-48 flex items-center group">
-                 <TransparentLogo className="absolute top-1/2 left-0 -translate-y-1/2 w-[150%] h-[150%] object-contain drop-shadow-[0_0_10px_rgba(0,180,255,0.4)]" />
+                 <TransparentLogo className="absolute top-1/2 left-[-30%] -translate-y-1/2 w-[180%] h-[180%] object-contain drop-shadow-[0_0_10px_rgba(0,180,255,0.4)]" />
               </div>
             </a>
             <p className="text-muted-foreground max-w-sm mb-8 leading-relaxed">
