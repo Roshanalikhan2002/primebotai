@@ -47,11 +47,11 @@ router.post("/contact", async (req, res) => {
     await transporter.sendMail(mailOptions);
     console.log(`Contact form email sent from ${email} to Contact.primebotai@gmail.com`);
     
-    res.status(200).json({ success: true, message: "Email sent successfully" });
+    return res.status(200).json({ success: true, message: "Email sent successfully" });
   } catch (error) {
     console.error("Error sending email:", error);
     // Even if it fails, we might want to log it in the console for the user to see
-    res.status(500).json({ 
+    return res.status(500).json({ 
       error: "Failed to send email", 
       details: "Make sure you have set up EMAIL_USER and EMAIL_PASS environment variables." 
     });
