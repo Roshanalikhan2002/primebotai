@@ -8,6 +8,7 @@ import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { ChatWidget } from "@/components/chat-widget";
 import { useLocalStorage } from "@/hooks/use-local-storage";
+import { useToast } from "@/hooks/use-toast";
 import companyLogo from "@assets/company_logo_1773792107107.png";
 
 export default function Home() {
@@ -418,19 +419,43 @@ function ContactSection() {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [submissions, setSubmissions] = useLocalStorage<any[]>('primebot_form_submissions', []);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const { toast } = useToast();
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus('submitting');
     
-    // Simulate network request
-    setTimeout(() => {
-      setSubmissions([...submissions, { ...formData, date: new Date().toISOString() }]);
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to send message");
+      }
+
       setStatus('success');
+      toast({
+        title: "Message Sent!",
+        description: "We have received your message and will get back to you soon.",
+      });
       setFormData({ name: '', email: '', message: '' });
       
       // Reset after 3s
       setTimeout(() => setStatus('idle'), 3000);
-    }, 1500);
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      setStatus('idle');
+      toast({
+        title: "Error",
+        description: "Something went wrong. Please try again later.",
+        variant: "destructive",
+      });
+    }
   };
 
   return (

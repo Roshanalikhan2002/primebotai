@@ -40,15 +40,15 @@ export function Navbar() {
         isScrolled ? "py-4 glass-panel border-b border-white/10" : "py-6 bg-transparent"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+      <div className="w-full px-2 md:px-10 flex items-center justify-between">
         <a 
           href="#home" 
           onClick={(e) => { e.preventDefault(); scrollTo("#home"); }}
-          className="flex items-center gap-2.5 z-50 relative"
+          className="flex items-center z-50 relative -ml-4 md:ml-0"
         >
           {/* True transparent logo rendering via canvas */}
-          <div className="h-16 w-48 md:h-20 md:w-56 relative flex-shrink-0 flex items-center group">
-            <TransparentLogo className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[150%] h-[150%] object-contain drop-shadow-[0_0_10px_rgba(0,180,255,0.4)]" />
+          <div className="h-16 w-40 md:h-20 md:w-48 relative flex-shrink-0 flex items-center group">
+            <TransparentLogo className="absolute top-1/2 left-0 -translate-y-1/2 w-[160%] h-[160%] object-contain drop-shadow-[0_0_10px_rgba(0,180,255,0.4)]" />
             {/* Shimmer sweep overlay on the logo */}
             <div
               className="absolute inset-0 pointer-events-none mix-blend-overlay opacity-0 group-hover:opacity-100 transition-opacity duration-300"

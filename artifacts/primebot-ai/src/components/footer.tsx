@@ -22,7 +22,7 @@ export function Footer() {
           <div className="lg:col-span-2">
             <a href="#home" onClick={(e) => { e.preventDefault(); scrollTo("#home"); }} className="inline-flex relative mb-6">
                <div className="relative h-20 w-48 flex items-center group">
-                 <TransparentLogo className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[150%] h-[150%] object-contain drop-shadow-[0_0_10px_rgba(0,180,255,0.4)]" />
+                 <TransparentLogo className="absolute top-1/2 left-0 -translate-y-1/2 w-[150%] h-[150%] object-contain drop-shadow-[0_0_10px_rgba(0,180,255,0.4)]" />
               </div>
             </a>
             <p className="text-muted-foreground max-w-sm mb-8 leading-relaxed">
@@ -32,7 +32,7 @@ export function Footer() {
               <a href="https://www.linkedin.com/company/primebot-ai/posts/?feedView=all" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full glass-panel flex items-center justify-center text-white/70 hover:text-primary hover:border-primary/50 transition-all duration-300">
                 <Linkedin size={20} />
               </a>
-              <a href="https://www.instagram.com/primebot.ai?utm_source=qr&igsh=NzRqMmw4aDV4cjMy" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full glass-panel flex items-center justify-center text-white/70 hover:text-primary hover:border-primary/50 transition-all duration-300">
+              <a href="https://www.instagram.com/primebot_ai?igsh=MXFybHQ1YXZsNHZjbQ==" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full glass-panel flex items-center justify-center text-white/70 hover:text-primary hover:border-primary/50 transition-all duration-300">
                 <Instagram size={20} />
               </a>
               <a href="mailto:contact.primebotai@gmail.com" className="w-10 h-10 rounded-full glass-panel flex items-center justify-center text-white/70 hover:text-primary hover:border-primary/50 transition-all duration-300">
